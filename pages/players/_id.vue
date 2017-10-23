@@ -9,7 +9,6 @@
 import axios from 'axios'
 export default {
   async asyncData ({ params, error }) {
-    console.log('params:', params)
     try {
       const { data } = await axios.get('https://statsapi.web.nhl.com/api/v1/people/' + params.id)
       return { player: data }

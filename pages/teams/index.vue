@@ -15,7 +15,6 @@ import axios from 'axios'
 export default {
   async asyncData () {
     const { data } = await axios.get('https://statsapi.web.nhl.com/api/v1/teams')
-    console.log('>', data)
     return { teams: data.teams }
   }
 }
